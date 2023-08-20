@@ -10,7 +10,10 @@
 
 
 import express from 'express';
+import controllers from '../controllers/user-controllers.js';
 
-export const UserRoutes= express.Router();
-UserRoutes.get('/profile',);
-
+const UserRoutes= express.Router();
+UserRoutes.get("/register",controllers.register);
+UserRoutes.get("/login",controllers.login);
+UserRoutes.post("/images",controllers.images)
+export default UserRoutes;
